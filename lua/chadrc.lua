@@ -20,5 +20,20 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+ M.ui = {
+   statusline = {
+     theme = "vscode_colored",
+     separator_style = "arrow",
+     order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "lsp", "cwd", "xyz", "abc" },
+     modules = {
+       abc = function()
+         return "hi"
+       end,
+
+       xyz =  "hi",
+       f = "%F"
+     }
+   },
+ }
 
 return M
